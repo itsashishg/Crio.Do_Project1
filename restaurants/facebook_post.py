@@ -52,6 +52,7 @@ class Facebook:
         'access_token': self.page_access_token,
         'caption': message
         }
+        response = requests.post('https://graph.facebook.com/'+self.page_id+'/photos', data=data)
         return
 
 if __name__ == '__main__':
