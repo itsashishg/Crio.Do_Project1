@@ -46,6 +46,12 @@ class Facebook:
     
     def publish_photo_msg(self, message, image_url):
         # write your code here
+        data = {
+        'url': image_url,
+        'published': 'true',
+        'access_token': self.page_access_token,
+        'caption': message
+        }
         return
 
 if __name__ == '__main__':
@@ -58,8 +64,8 @@ if __name__ == '__main__':
     #    Eg: image_url = 'https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/very_big_1/public/feature/images/ice_cream_1.jpg'
     # 3) Set the 'my_name' variable to your name so you can identify your posts.
     
-    image_url = ''
-    my_name = ''
+    image_url = 'http://www.ruchiskitchen.com/wp-content/uploads/2017/04/butterscotch-ice-cream-1_Fotor.jpg'
+    my_name = 'ashish'
 
     message = my_name + ' likes this ice-cream!'
     facebook.publish_photo_msg(message, image_url)
